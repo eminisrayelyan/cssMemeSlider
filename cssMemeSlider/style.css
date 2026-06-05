@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Display", sans-serif;
+    letter-spacing: 0.124rem;
+}
+
+:root {
+    --main-color: rgb(37, 40, 42);
+    --white-color: rgb(255, 255, 255);
+    --blue-color: rgb(113, 171, 254);
+}
+
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+}
+
+.slider-wrapper {
+    width: 60vw;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    height: 70%;
+    transition: all 0.2s linear;
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+.slide, .slide img {
+    width: 100%;
+    height: 100%;  
+    border-radius: 0.626rem;
+}
+
+.slider-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.24rem 0;
+}
+
+.text-wrapper {
+    width: 12em;
+    overflow: hidden;
+}
+
+.text-slider {
+    display: flex;
+    width: 100%; 
+    transition: all 0.2s linear;
+}
+
+.text {
+    flex: 0 0 100%;
+    color: #FFFFFF;
+}
+
+.radio {
+    cursor: pointer;
+    appearance: none;
+    width: 0.626rem;
+    height: 0.626rem;
+    border-radius: 3.14rem;
+    border: 0.0626rem solid var(--blue-color);
+    background-color: var(--blue-color);
+}
+
+.radio:checked {
+    background-color: var(--main-color); 
+}
+
+.radio:hover {
+    border: 0.0626rem solid var(--white-color);
+    background-color: var(--white-color);
+}
+
+.radio:checked:hover {
+    border: 0.0626rem solid var(--white-color);
+    background-color: var(--main-color); 
+}
+
+.label {
+    padding: 0.626rem 0.24rem;
+    cursor: pointer;
+}
+
+.wrapper:has(.radio-2:checked) .slider{
+    transform: translateX(-60vw);
+}
+
+.wrapper:has(.radio-2:checked) .text-slider{
+    transform: translateX(-12em);
+}
+
+.wrapper:has(.radio-3:checked) .slider{
+    transform: translateX(-120vw);
+}
+
+.wrapper:has(.radio-3:checked) .text-slider{
+    transform: translateX(-24em);
+}
+
+.wrapper:has(.radio-4:checked) .slider{
+    transform: translateX(-180vw);
+}
+
+.wrapper:has(.radio-4:checked) .text-slider{
+    transform: translateX(-36em);
+}
+
+@media (max-width: 500px) {
+    .slider-wrapper {
+        width: 80vw;
+        height: 50vh;
+        overflow: hidden;
+    }
+
+    .slider {
+        height: 60%;
+    }
+
+    .slider-footer {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        padding: 1.24rem 0;     
+    }
+
+    .controllers {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1.24rem;
+    }
+
+    .wrapper:has(.radio-2:checked) .slider{
+        transform: translateX(-80vw);
+    }
+    
+    .wrapper:has(.radio-3:checked) .slider{
+        transform: translateX(-160vw);
+    }
+    
+    .wrapper:has(.radio-4:checked) .slider{
+        transform: translateX(-240vw);
+    }  
+}
