@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Red Hat Display", sans-serif;
+    letter-spacing: 0.124rem;
 }
 
 html, body {
@@ -13,6 +17,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: RGB(37, 40, 42);
 }
 
 .slider-wrapper {
@@ -56,6 +61,7 @@ html, body {
 
 .text {
     flex: 0 0 100%;
+    color: #FFFFFF;
 }
 
 .label {
@@ -90,19 +96,24 @@ html, body {
 @media (max-width: 500px) {
     .slider-wrapper {
         width: 80vw;
-        height: 30vh;
+        height: 50vh;
         overflow: hidden;
+    }
+
+    .slider {
+        height: 60%;
     }
 
     .slider-footer {
         flex-direction: column-reverse;
         justify-content: space-between;
-        padding: 0 0;
+        padding: 1.24rem 0;     
     }
 
     .controllers {
         display: flex;
         justify-content: center;
+        padding-bottom: 1.24rem;
     }
 
     .wrapper:has(.radio-2:checked) .slider{
