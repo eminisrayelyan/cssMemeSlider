@@ -86,3 +86,23 @@ html, body {
 .wrapper:has(.radio-4:checked) .text-slider{
     transform: translateX(-510px);
 }
+
+@media (max-width: 500px) {
+    .slider-wrapper {
+        width: 300px;
+        height: 30vh;
+        overflow: hidden;
+    }
+
+    .wrapper:has(.radio-2:checked) .slider{
+        transform: translateX(-300px);
+    }
+    
+    .wrapper:has(.radio-3:checked) .slider{
+        transform: translateX(-600px);
+    }
+    
+    .wrapper:has(.radio-4:checked) .slider{
+        transform: translateX(-900px);
+    }  
+}
