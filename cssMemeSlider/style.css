@@ -24,6 +24,7 @@ html, body {
 .slider {
     display: flex;
     height: 70%;
+    transition: all 0.2s linear;
 }
 
 .slide {
@@ -50,6 +51,7 @@ html, body {
 .text-slider {
     display: flex;
     width: 100%; 
+    transition: all 0.2s linear;
 }
 
 .text {
