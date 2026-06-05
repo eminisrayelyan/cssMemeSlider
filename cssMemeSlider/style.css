@@ -58,6 +58,11 @@ html, body {
     flex: 0 0 100%;
 }
 
+.label {
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
 .wrapper:has(.radio-2:checked) .slider{
     transform: translateX(-700px);
 }
