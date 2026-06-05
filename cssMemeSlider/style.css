@@ -8,6 +8,12 @@
     letter-spacing: 0.124rem;
 }
 
+:root {
+    --main-color: rgb(37, 40, 42);
+    --white-color: rgb(255, 255, 255);
+    --blue-color: rgb(113, 171, 254);
+}
+
 html, body {
     height: 100%;
 }
@@ -17,7 +23,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(37, 40, 42);
+    background-color: var(--main-color);
 }
 
 .slider-wrapper {
@@ -67,25 +73,25 @@ html, body {
 .radio {
     cursor: pointer;
     appearance: none;
-    width: 10px;
-    height: 10px;
-    border-radius: 50px;
-    border: 1px solid rgb(113, 171, 254);
-    background-color: rgb(113, 171, 254);
+    width: 0.626rem;
+    height: 0.626rem;
+    border-radius: 3.14rem;
+    border: 0.0626rem solid var(--blue-color);
+    background-color: var(--blue-color);
 }
 
 .radio:checked {
-    background-color: rgb(37, 40, 42); 
+    background-color: var(--main-color); 
 }
 
 .radio:hover {
-    border: 1px solid rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255);
+    border: 0.0626rem solid var(--white-color);
+    background-color: var(--white-color);
 }
 
 .radio:checked:hover {
-    border: 1px solid rgb(255, 255, 255);
-    background-color: rgb(37, 40, 42); 
+    border: 0.0626rem solid var(--white-color);
+    background-color: var(--main-color); 
 }
 
 .label {
