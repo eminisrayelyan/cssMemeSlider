@@ -94,6 +94,17 @@ html, body {
         overflow: hidden;
     }
 
+    .slider-footer {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        padding: 0 0;
+    }
+
+    .controllers {
+        display: flex;
+        justify-content: center;
+    }
+
     .wrapper:has(.radio-2:checked) .slider{
         transform: translateX(-80vw);
     }
